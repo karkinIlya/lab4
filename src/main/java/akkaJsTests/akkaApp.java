@@ -1,2 +1,4 @@
-package akkaJsTests;public class akkaApp {
+package akkaJsTests;
+
+public class akkaApp {
 }
