@@ -3,17 +3,22 @@ package akkaJsTests;
 import akka.actor.AbstractActor;
 import akka.actor.UntypedActor;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class StoreActor<InT, OutT> extends UntypedActor {
-    private Map<String, JsTest<String, Integer>> store = new HashMap<>();
+    private Map<String, List<JsTest>> store = new HashMap<>();
 
     @Override
     public void onReceive(Object message) throws Throwable {
         if (message instanceof JsTest) {
-            this.store.put()
+            JsTest test = (JsTest)message;
+            if (store.get(test.getPackageId()).isEmpty()) {
+                store.put(test.getPackageId(), new ArrayList<>());
+            }
+            store.get(test.getPackageId()).add(test);
+        } else if (message instanceof String) {
+            String packageId = (String) message;
+            getContext().sender().tell(store.get(packageId).stream().map(s -> s.getResult()), this.getSelf());
         }
     }
 }

@@ -1,2 +1,4 @@
-package akkaJsTests;public class RouterActor {
+package akkaJsTests;
+
+public class RouterActor {
 }

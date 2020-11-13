@@ -3,41 +3,53 @@ package akkaJsTests;
 import java.util.List;
 
 public class JsTest {
+    private String packageId;
     private String jsCode;
+    private String functionName;
     private String testName;
-    private ResultType expectedResult;
-    private Object result;
-    private List<Object> params;
+    private String expectedResult;
+    private List<String> params;
+    private String result;
 
-    public JsTest(String jsCode, String testName, Object expectedResult, List<Object> params) {
+    public JsTest(String packageId, String jsCode, String functionname, String testName, String expectedResult,
+                  List<String> params) {
+        this.packageId = packageId;
         this.jsCode = jsCode;
+        this.functionName = functionname;
         this.testName = testName;
         this.expectedResult = expectedResult;
-        this.result = result;
         this.params = params;
+    }
+
+    public String getPackageId() {
+        return packageId;
+    }
+
+    public String getJsCode() {
+        return jsCode;
+    }
+
+    public String getFunctionName() {
+        return functionName;
     }
 
     public String getTestName() {
         return testName;
     }
 
-    public ResultType getExpectedResult() {
+    public String getExpectedResult() {
         return expectedResult;
     }
 
-    public Object getResult() {
-        return result;
-    }
-
-    public void setResult(Object result) {
-        this.result = result;
-    }
-
-    public List<ParamsType> getParams() {
+    public List<String> getParams() {
         return params;
     }
 
-    public String getJsCode() {
-        return jsCode;
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
     }
 }
