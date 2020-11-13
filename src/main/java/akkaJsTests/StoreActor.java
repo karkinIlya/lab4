@@ -1,4 +1,7 @@
 package akkaJsTests;
 
-public class StoreActor {
+import akka.actor.AbstractActor;
+
+public class StoreActor extends AbstractActor {
+    private Map<String, >
 }

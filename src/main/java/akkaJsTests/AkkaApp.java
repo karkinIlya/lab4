@@ -2,7 +2,7 @@ package akkaJsTests;
 
 import akka.actor.ActorSystem;
 
-public class akkaApp {
+public class AkkaApp {
     final ActorSystem system = ActorSystem.create("jsTestSystem");
 
 
