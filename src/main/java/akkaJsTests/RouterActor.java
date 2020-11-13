@@ -3,6 +3,7 @@ package akkaJsTests;
 import akka.actor.ActorRef;
 import akka.actor.Props;
 import akka.actor.UntypedActor;
+import akka.dispatch.OnComplete;
 import akka.dispatch.OnSuccess;
 import akka.pattern.Patterns;
 
@@ -43,10 +44,16 @@ public class RouterActor extends UntypedActor {
             }
         } else if (message instanceof Integer) {  // GET
             String packageId = "0";
-            Patterns.ask(storeActor, packageId, TIMEOUT_MILLIS).onSuccess(new OnSuccess<String>() {
+            Patterns.ask(storeActor, packageId, TIMEOUT_MILLIS).onSuccess(new OnComplete<String>() {
+                @Override
+                public void onComplete(Throwable failure, String success) throws Throwable {
+
+                }
+
+                ActorRef sender = getSender();
                 @Override
                 public void onSuccess(String result) throws Throwable {
-
+                    sender.tell(result, getSelf());
                 }
             });
         }
