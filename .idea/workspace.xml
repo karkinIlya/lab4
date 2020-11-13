@@ -14,10 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc9a2136-2de3-4048-ad34-463622258efe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/AkkaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/AkkaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/JsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/JsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/StoreActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/StoreActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/akkaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/akkaApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605285458060</updated>
-      <workItem from="1605285459751" duration="1651000" />
+      <workItem from="1605285459751" duration="3043000" />
     </task>
     <servers />
   </component>
