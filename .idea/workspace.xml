@@ -14,7 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc9a2136-2de3-4048-ad34-463622258efe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/AkkaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/AkkaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/ExecuteActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/ExecuteActor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/JsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/JsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/akkaJsTests/StoreActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/akkaJsTests/StoreActor.java" afterDir="false" />
     </list>
@@ -47,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -72,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605285458060</updated>
-      <workItem from="1605285459751" duration="3043000" />
+      <workItem from="1605285459751" duration="3386000" />
     </task>
     <servers />
   </component>
@@ -89,5 +91,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="804" y="261" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1605288505791">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="804" y="261" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1605288505791" />
   </component>
 </project>

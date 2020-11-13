@@ -1,2 +1,4 @@
-package akkaJsTests;public class ExecuteActor {
+package akkaJsTests;
+
+public class ExecuteActor {
 }
