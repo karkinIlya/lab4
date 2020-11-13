@@ -2,13 +2,15 @@ package akkaJsTests;
 
 import java.util.List;
 
-public class JsTest <ResultType, ParamsType> {
+public class JsTest {
+    private String jsCode;
     private String testName;
     private ResultType expectedResult;
     private Object result;
-    private List<ParamsType> params;
+    private List<Object> params;
 
-    public JsTest(String testName, ResultType expectedResult, Object result, List<ParamsType> params) {
+    public JsTest(String jsCode, String testName, Object expectedResult, List<Object> params) {
+        this.jsCode = jsCode;
         this.testName = testName;
         this.expectedResult = expectedResult;
         this.result = result;
@@ -27,7 +29,15 @@ public class JsTest <ResultType, ParamsType> {
         return result;
     }
 
+    public void setResult(Object result) {
+        this.result = result;
+    }
+
     public List<ParamsType> getParams() {
         return params;
+    }
+
+    public String getJsCode() {
+        return jsCode;
     }
 }
