@@ -1,2 +1,4 @@
-package akkaJsTests;public class StoreActor {
+package akkaJsTests;
+
+public class StoreActor {
 }
