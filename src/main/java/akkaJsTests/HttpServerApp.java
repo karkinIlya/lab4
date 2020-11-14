@@ -1,2 +1,4 @@
-package akkaJsTests;public class HttpServerApp {
+package akkaJsTests;
+
+public class HttpServerApp {
 }
