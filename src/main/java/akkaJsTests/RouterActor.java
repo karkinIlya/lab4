@@ -45,21 +45,14 @@ public class RouterActor extends UntypedActor {
         } else if (message instanceof Integer) {  // GET
             String packageId = "0";
             Patterns.ask(storeActor, packageId, TIMEOUT_MILLIS).onSuccess(
-                    new OnSuccess<String>() {
+                    new OnSuccess<Object>() {
                         ActorRef sender = getSender();
 
                         @Override
-                        public void onSuccess(String result) throws Throwable {
+                        public void onSuccess(Object result) throws Throwable {
                             sender.tell(result, getSelf());
                         }
-                    },
-                    new OnFailure() {
-
-                        @Override
-                        public void onFailure(Throwable failure) throws Throwable {
-
-                        }
-                    });
+                    }, getContext().dispatcher());
         }
     }
 }
