@@ -14,19 +14,35 @@ import akka.http.javadsl.server.Route;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
+import java.io.IOException;
 import java.util.concurrent.CompletionStage;
 
 public class AkkaApp extends AllDirectives {
-    public static void main(String[] args) {
+
+    public static final String HOST_NAME = "localhost";
+    public static final int PORT_NAME = 8080;
+
+    public static void main(String[] args) throws IOException {
         final ActorSystem system = ActorSystem.create("jsTestSystem");
         ActorRef routerActor = system.actorOf(Props.create(RouterActor.class));
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
 
-        AkkaApp app = new AkkaApp();
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = app.crea
-        final CompletionStage<ServerBinding> binding = http.bindAndHandle(routeFlow,
-                ConnectHttp.toHost("localhost", 8080), materializer);
+        final AkkaApp app = new AkkaApp();
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow =
+                app
+                        .createRoute()
+                        .flow(system, materializer);
+        final CompletionStage<ServerBinding> binding =
+                http.bindAndHandle(
+                        routeFlow,
+                        ConnectHttp.toHost(HOST_NAME, PORT_NAME),
+                        materializer);
+        System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
+        System.in.read();
+        binding
+                .thenCompose(ServerBinding::unbind)
+                .thenAccept(unbound ->system.terminate());
     }
 
     private Route createRoute() {
